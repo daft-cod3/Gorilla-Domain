@@ -1,0 +1,58 @@
+@keyframes planePath {
+	0% {
+		transform: translate(-50%, -50%) rotate(-10deg) scale(1);
+	}
+	20% {
+		transform: translate(-48%, -52%) rotate(0deg) scale(1.08);
+	}
+	40% {
+		transform: translate(-52%, -48%) rotate(8deg) scale(1.12);
+	}
+	60% {
+		transform: translate(-50%, -50%) rotate(0deg) scale(1.08);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(-10deg) scale(1);
+	}
+}
+.animate-plane-path {
+	animation: planePath 2.8s infinite cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes glowPulse {
+	0%, 100% {
+		box-shadow: 0 0 60px 20px rgba(100,180,255,0.25), 0 0 0 0 rgba(100,180,255,0.10);
+		opacity: 0.7;
+	}
+	50% {
+		box-shadow: 0 0 120px 40px rgba(100,180,255,0.45), 0 0 0 0 rgba(100,180,255,0.10);
+		opacity: 1;
+	}
+}
+.dark .animate-glow {
+	animation: glowPulse 2.2s infinite cubic-bezier(0.4,0,0.2,1);
+	box-shadow: 0 0 60px 20px rgba(80,120,255,0.18), 0 0 0 0 rgba(80,120,255,0.10);
+}
+.animate-glow {
+	animation: glowPulse 2.2s infinite cubic-bezier(0.4,0,0.2,1);
+	box-shadow: 0 0 60px 20px rgba(100,180,255,0.25), 0 0 0 0 rgba(100,180,255,0.10);
+}
+
+@import "tailwindcss";
+
+/* Minimalist Card Component Custom Styles */
+.card-component {
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04), 0 1.5px 4px 0 rgba(0,0,0,0.02);
+	will-change: transform, box-shadow;
+	transition-property: box-shadow, transform, border-color;
+}
+.card-component:hover {
+	transform: translateY(-4px) scale(1.035) rotate(-0.5deg);
+	box-shadow: 0 8px 24px 0 rgba(0, 120, 255, 0.10), 0 2px 8px 0 rgba(0,0,0,0.04);
+	border-color: #60a5fa;
+}
+.card-component h3, .card-component p {
+	transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.card-component .group-hover\:scale-x-100 {
+	transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
