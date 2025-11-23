@@ -24,15 +24,17 @@ export default function ModelTownBoardStudy() {
         >
          
           {modelTownBoardZones.map((zone) => (
-            <circle
-              key={zone.id}
-              cx={zone.position.x}
-              cy={zone.position.y}
-              r={2}
-              fill={selectedZone === zone.id ? "blue" : "gray"}
-              className="cursor-pointe text-white"
-              onClick={() => setSelectedZone(zone.id)}
-            />
+            zone.position && typeof zone.position.x === 'number' && typeof zone.position.y === 'number' ? (
+              <circle
+                key={zone.id}
+                cx={zone.position.x}
+                cy={zone.position.y}
+                r={2}
+                fill={selectedZone === zone.id ? "blue" : "gray"}
+                className="cursor-pointer text-white"
+                onClick={() => setSelectedZone(zone.id)}
+              />
+            ) : null
           ))}
           
         </svg>
@@ -57,9 +59,9 @@ export default function ModelTownBoardStudy() {
         </h2>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
-          {modelTownBoardZones.map((zone) => (
+          {modelTownBoardZones.map((zone, index) => (
             <div
-              key={zone.id}
+              key={zone.id ?? index}
               className="p-4 border rounded cursor-pointer 
               hover:bg-opacity-50 border-blue-300 hover:border-blue-500"
               onClick={() => setSelectedZone(zone.id)}
