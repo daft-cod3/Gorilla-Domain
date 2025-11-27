@@ -17,21 +17,26 @@ export default function VehiclePartsStudy() {
   const selectedPartData = selectedPart ? vehicleParts.find((p) => p.id === selectedPart) : null;
 
   return (
-    <main className="dark:bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 dark:text-white mt-10 p-10  mx-auto">
+    <main className="dark:bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 dark:text-white mt-10 p-10   mx-auto">
       <h1 className="text-3xl font-semibold mb-6 py-4 text-center">
         Vehicle Parts Study page
       </h1>
       <div ref={imageSectionRef} className="mb-6 grid grid-cols-2 md:grid-cols-4 gap-4 justify-center max-w-4xl mx-auto min-h-[220px]">
         {selectedPart && selectedPartData ? (
           <>
-            <Image src={selectedPartData.images[0]} alt={selectedPartData.name} 
+            <Image src={selectedPartData.images[0]} 
+            alt={selectedPartData.name} 
+            width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
+            <Image src={selectedPartData.images[1]} 
+            alt={selectedPartData.name} 
+            width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
+            <Image src={selectedPartData.images[2]} 
+            alt={selectedPartData.name}
               width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
-            <Image src={selectedPartData.images[1]} alt={selectedPartData.name} 
-              width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
-            <Image src={selectedPartData.images[2]} alt={selectedPartData.name}
-              width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
-            <Image src={selectedPartData.images[3]} alt={selectedPartData.name}
-              width={200} height={200} className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
+            <Image src={selectedPartData.images[3]} 
+            alt={selectedPartData.name}
+              width={200} height={200} 
+              className="rounded-lg shadow-md w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg" />
           </>
         ) : (
           <div className="col-span-2 md:col-span-4 flex items-center justify-center rounded-lg border-2 border-dashed border-gray-500 dark:border-gray-400 bg-transparent text-gray-500 dark:text-gray-400 text-lg font-light">
@@ -63,9 +68,14 @@ export default function VehiclePartsStudy() {
               onKeyDown={(e) => { if (e.key==='Enter') setSelectedPart(part.id)}}
               role="button"
             >
-              <Image src={part.images[0]} alt={part.name} width={60} height={60}
-                className="rounded-full transition-transform duration-300 hover:scale-110" />
-              <h3 className="font-semibold text-blue-600 dark:text-blue-400">{part.name}</h3>
+              <Image src={part.images[0]} 
+              alt={part.name} 
+              width={60} 
+              height={60}
+              className="rounded-full transition-transform duration-300 hover:scale-110" />
+              <h3 className="font-semibold text-blue-600 dark:text-blue-400">
+                {part.name}
+              </h3>
               <p className="text-sm text-gray-800 dark:text-gray-300">
                 {part.description}
               </p>

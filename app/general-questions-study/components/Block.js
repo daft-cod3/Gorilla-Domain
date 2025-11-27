@@ -1,35 +1,30 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 
-import {useRouter} from 'next/navigation';
-
-export default function Block({luckyHeader, luckyPara}){
+export default function Block({ luckyHeader, luckyPara, route }) {
     const router = useRouter();
 
-    return(
+    return (
         <div
-        className="border border-blue-400 rounded-lg p-4 m-2 shadow-md hover:shadow-lg
-         hover:scale-105 transition-all duration-300 max-w-sm w-full"
+            className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-xl hover:scale-105 transition-all duration-500 ease-out max-w-sm w-full cursor-pointer group"
+            onClick={() => router.push(route)}
         >
-            <div>
-                <h3 className="font-bold text-3xl p-4">
+            <div className="text-center">
+                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">
                     {luckyHeader}
                 </h3>
-            </div>
-            <span>
-                <p className="text-sm p-2">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {luckyPara}
                 </p>
-            </span>
-            <div>
-          <button
-          onClick = {() => router.push(route)}
-          className="border bg-blue-600 p-2 rounded-lg  border-gray-300 m-6
-           font-bold hover:bg-blue-700 transition duration-400 hover:cursor-pointer hover:shadow-lg">
-            Get started
-          </button>
+            </div>
+            <div className="mt-4 text-center">
+                <button
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+                >
+                    Get started
+                </button>
+            </div>
         </div>
-
-        </div>
-    )
+    );
 }

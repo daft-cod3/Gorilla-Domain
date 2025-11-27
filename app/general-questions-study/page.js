@@ -15,7 +15,7 @@ export default function GeneralQuestionsStudy() {
       </div>
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 m-2 p-6">
+      <div className="flex flex-wrap justify-center gap-6 m-2 p-6">
       <Block
       luckyHeader="Theory Study Notes"
       luckyPara="Study for your theory NTSA exams and sharpen your skils in the quiz page."
@@ -23,21 +23,21 @@ export default function GeneralQuestionsStudy() {
       />
       <Block
       luckyHeader="Road Signs"
-      luckyPara="Study for the road signs using our components,visual aid and audio services" 
+      luckyPara="Study for the road signs using our components,visual aid and audio services"
       route=""
       />
       <Block
       luckyHeader="General rules of the road"
-      luckyPara="Study the general rules of the road to prepare for the quizes" 
+      luckyPara="Study the general rules of the road to prepare for the quizes"
       route=""
-      /> 
+      />
       </div>
 
         <div>
           <Detail/>
         </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         <RoadSign
           signName="Steep descent ahead"
           signDetail="This indicates a steep descending road ahead"
@@ -51,12 +51,12 @@ export default function GeneralQuestionsStudy() {
         <RoadSign
          signName="No Left Turns"
          signDetail="This indicates no driver should turn left"
-         signIcon="/general-quiz/sign3.jpg" 
+         signIcon="/general-quiz/sign3.jpg"
         />
          <RoadSign
          signName="No Entry"
          signDetail="This indicates no driver  should proceed beyond this point"
-         signIcon="/general-quiz/sign1.jpg" 
+         signIcon="/general-quiz/sign1.jpg"
         />
       </div>
   </main>

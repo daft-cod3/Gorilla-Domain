@@ -8,16 +8,19 @@ export default function Card({ title, description, route }) {
   return (
     <div
       onClick={() => router.push(route)}
-      className="card-component group cursor-pointer bg-white dark:bg-gray-900 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700 max-w-xs w-full transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] relative overflow-hidden"
+      className="group cursor-pointer bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-xl p-6 border border-gray-200 dark:border-gray-700 max-w-xs w-full transition-all duration-500 ease-out hover:scale-105"
     >
-      <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-600/60 to-blue-950/60" />
-      <h3 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white tracking-tight transition-colors duration-300">
-        {title}
-      </h3>
-      <p className="text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300">
-        {description}
-      </p>
-      <span className="block h-0.5 w-8 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-4 rounded-full" />
+      <div className="text-center">
+        <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          {description}
+        </p>
+      </div>
+      <div className="mt-4 flex justify-center">
+        <span className="block h-0.5 w-8 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-full" />
+      </div>
     </div>
   );
 }
