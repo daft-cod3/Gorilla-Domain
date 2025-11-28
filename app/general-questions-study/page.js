@@ -3,6 +3,7 @@ import Block from './components/Block';
 import RoadSign from './components/RoadSign'
 import Detail from './components/Detail'
 import { generalStudyData } from '../data/generalStudyData'
+import StudyContentBlock from '../components/StudyContentBlock'
 
 
 export default function GeneralQuestionsStudy() {
@@ -19,7 +20,7 @@ export default function GeneralQuestionsStudy() {
       <Block
       luckyHeader="Theory Study Notes"
       luckyPara="Study for your theory NTSA exams and sharpen your skils in the quiz page."
-      route=""
+      route="#theory-notes"
       />
       <Block
       luckyHeader="Road Signs"
@@ -58,6 +59,19 @@ export default function GeneralQuestionsStudy() {
          signDetail="This indicates no driver  should proceed beyond this point"
          signIcon="/general-quiz/sign1.jpg"
         />
+      </div>
+
+      <div id="theory-notes" className="mt-10">
+        <h2 className="text-xl font-bold mb-6">Theory Study Notes</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {generalQuestionsStudy.map((item, index) => (
+            <StudyContentBlock
+              key={index}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
       </div>
   </main>
   );
