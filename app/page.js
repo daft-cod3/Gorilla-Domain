@@ -48,19 +48,14 @@ export default function Home() {
 
       <section id="cards" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 p-10">
       <Card
-        title="Vehicle Parts Study"
-        description="Learn about vehicle components with interactive diagrams."
-        route="/vehicle-parts-study"
+        title="Study Notes"
+        description="Comprehensive study notes combining general questions and vehicle parts."
+        route="/study-notes"
       />
       <Card
         title="Vehicle Parts Quiz"
         description="Test your knowledge on vehicle parts."
         route="/vehicle-parts-quiz"
-      />
-      <Card
-        title="General Questions Study"
-        description="Study driving theory and traffic rules."
-        route="/general-questions-study"
       />
       <Card
         title="General Questions Quiz"

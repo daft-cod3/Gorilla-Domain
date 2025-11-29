@@ -8,7 +8,7 @@ export default function ModelTownBoardStudy() {
   const [selectedZone, setSelectedZone] = useState(null);
 
   return (
-    <main className="p-10 mt-10 dark:bg-gray-900 dark:text-white">
+    <main className="p-10 mt-10 dark:bg-gray-950 dark:text-white">
 
       <h1 className="text-2xl font-bold mb-6 p-4 text-gray-900 dark:text-white">
         Model Town Board Study

@@ -8,7 +8,7 @@ export default function Card({ title, description, route }) {
   return (
     <div
       onClick={() => router.push(route)}
-      className="group cursor-pointer bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-xl p-6 border border-gray-200 dark:border-gray-700 max-w-xs w-full transition-all duration-500 ease-out hover:scale-105"
+      className="group cursor-pointer bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full transition-all duration-300 ease-in-out hover:scale-105"
     >
       <div className="text-center">
         <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">

@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-4 fixed
+    <nav className="bg-white dark:bg-black text-gray-900 dark:text-white p-6 fixed
      w-full top-0 z-50 border-b border-gray-200 dark:border-gray-700 mb-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
@@ -67,24 +67,17 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="mx-4 my-2 sm:my-0">
-            <Link href="/vehicle-parts-study" 
-            onClick={() => setIsOpen(false)} 
-            className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-400">
-              Vehicle Parts Notes
-            </Link>
-          </li>
-          <li className="mx-4 my-2 sm:my-0">
-            <Link href="/vehicle-parts-quiz" 
-            onClick={() => setIsOpen(false)} 
+            <Link href="/vehicle-parts-quiz"
+            onClick={() => setIsOpen(false)}
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-400">
               Vehicle Parts Quiz
             </Link>
           </li>
           <li className="mx-4 my-2 sm:my-0">
-            <Link href="/general-questions-study" 
-            onClick={() => setIsOpen(false)} 
+            <Link href="/study-notes"
+            onClick={() => setIsOpen(false)}
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-400">
-              General Questions Notes
+              Docs
             </Link>
           </li>
           <li className="mx-4 my-2 sm:my-0">
