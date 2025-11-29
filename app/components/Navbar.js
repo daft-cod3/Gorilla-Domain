@@ -66,13 +66,7 @@ export default function Navbar() {
               Home
             </Link>
           </li>
-          <li className="mx-4 my-2 sm:my-0">
-            <Link href="/vehicle-parts-quiz"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-400">
-              Vehicle Parts Quiz
-            </Link>
-          </li>
+          
           <li className="mx-4 my-2 sm:my-0">
             <Link href="/study-notes"
             onClick={() => setIsOpen(false)}
@@ -84,7 +78,7 @@ export default function Navbar() {
             <Link href="/general-questions-quiz" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-400">
-              General Questions Quiz
+              Questions Quiz
             </Link>
           </li>
           <li className="mx-4 my-2 sm:my-0">
